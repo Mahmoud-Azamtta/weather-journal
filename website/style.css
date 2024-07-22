@@ -1,0 +1,146 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: linear-gradient(
+    to right top,
+    #083344,
+    #164e63,
+    #155e75,
+    #037490,
+    #0891b2
+  );
+  color: #fff;
+}
+
+/* #051937, */
+/* #004d7a, */
+/* #008793, */
+/* #00bf72, */
+/* #a8eb12 */
+
+#app {
+  display: grid;
+  font-family: "Oswald", sans-serif;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "headline"
+    "weather-side"
+    "entries-side";
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.headline {
+  grid-area: headline;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.weather-side {
+  background-color: #1e293b;
+  grid-area: weather-side;
+  padding: 20px 40px;
+  border: 1px solid #0f172a;
+  border-radius: 10px;
+}
+
+.entries-side {
+  grid-area: entries-side;
+  padding-top: 20px;
+}
+
+.holder {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  background-color: #475569;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0f172a;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #334155;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.entries-side .title {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.entries-side p {
+  margin: 0;
+}
+
+.entries-side .empty {
+  text-align: center;
+}
+
+#older-entries .older-content {
+  margin-bottom: 1rem;
+}
+
+#not-found {
+  text-transform: capitalize;
+  text-align: center;
+  background-color: #450a0a;
+  color: #ef4444;
+  font-weight: 400;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .weather-side {
+    margin: 0 50px;
+  }
+
+  #app {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  #app {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "headline headline"
+      "weather-side entries-side";
+  }
+
+  .entries-side {
+    border-top: none;
+    padding-top: 0;
+    padding-left: 20px;
+  }
+}
